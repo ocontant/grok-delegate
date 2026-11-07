@@ -1,0 +1,26 @@
+# Fragment for ~/.codex/config.toml
+# Start the bridge first: python3 mcp_server.py --serve
+# Codex then shares that one process over streamable HTTP.
+
+[mcp_servers.grok_delegate]
+url = "http://127.0.0.1:7391/mcp"
+# A review turn can outlive the default tool timeout.
+tool_timeout_sec = 3600
+
+[mcp_servers.grok_delegate.tools.delegate]
+approval_mode = "approve"
+
+[mcp_servers.grok_delegate.tools.delegate_wait]
+approval_mode = "approve"
+
+[mcp_servers.grok_delegate.tools.pool]
+approval_mode = "approve"
+
+[mcp_servers.grok_delegate.tools.bus_publish]
+approval_mode = "approve"
+
+[mcp_servers.grok_delegate.tools.bus_receive]
+approval_mode = "approve"
+
+[mcp_servers.grok_delegate.tools.bus_streams]
+approval_mode = "approve"

@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Runtime state. These files hold task text, session ids, and local paths.
+pool.json
+pool.lock
+pool.tmp
+serve.pid
+serve.log
+jobs/
+results/
+delegates/
+bus/
+*.tmp

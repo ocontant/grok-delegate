@@ -1,0 +1,4 @@
+{
+  "worker_backend": "grok",
+  "grok_delegate_enabled": true
+}
