@@ -62,11 +62,17 @@ The server refuses to bind anything except `127.0.0.1` or `localhost`. A second
 start exits if that same command is already running.
 
 Point Codex at it with the fragment in `examples/codex.config.toml`. Restart
-Codex after editing `~/.codex/config.toml`. Guidance you can paste into a
-project `AGENTS.md` is in `examples/AGENTS.md`.
+Codex after editing `~/.codex/config.toml`.
 
-`examples/agent-routing.json` is a project hint for the coordinator. This
-server does not read that file.
+The coordinator policy is `skills/codex-orchestrator/`. Codex coordinates,
+Grok executes, and Codex workers take execution only after the Grok plan is
+exhausted. Copy that directory to `~/.codex/skills/codex-orchestrator` so
+Codex loads it. `examples/AGENTS.md` is the short project note that points
+at the skill.
+
+`examples/agent-routing.json` is the Grok default for that policy. This
+server does not read that file. The Codex hook beside the task directory
+does.
 
 ## State
 
